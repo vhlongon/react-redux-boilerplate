@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import BrowserSyncPlugin from 'browser-sync-webpack-plugin';
+import autoprefixer from 'autoprefixer';
 
 module.exports = {
   entry: './src/js/index.js',
@@ -41,11 +42,16 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: ['style', 'css?sourceMap', 'sass?sourceMap']
+        loaders: ['style', 'css?sourceMap', 'sass?sourceMap', 'postcss-loader']
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url-loader'
       }
     ]
   },
   sassLoader: {
     includePaths: [path.resolve(__dirname, './src/scss')]
-  }
+  },
+  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ]
 }
