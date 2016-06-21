@@ -45,12 +45,7 @@ module.exports = {
         loaders: ['style', 'css?sourceMap', 'sass?sourceMap', 'postcss-loader']
       },
       {
-          test: /\.(jpg|png|gif)$/,
-          include: /images/,
-          loader: 'url'
-      },
-      {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+        test: /\.(png|jpg|ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'url-loader'
       }
     ]
