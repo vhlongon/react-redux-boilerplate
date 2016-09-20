@@ -6,9 +6,8 @@
   "scripts": {
     "clean": "rm -f dist/{css/*,js/*,images/*}",
     "postinstall": "webpack-dev-server",
-    "start": "webpack-dev-server",
-    "build": "webpack -p",
-    "build-prod": "webpack -p --define process.env.NODE_ENV='\"production\"' --progress --colors"
+    "start": "webpack-dev-server --config webpack.config.babel.js",
+    "build": "webpack --config webpack.production.config.babel.js -p"
   },
   "keywords": [
     "React",

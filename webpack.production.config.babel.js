@@ -8,18 +8,11 @@ module.exports = {
   output: {
     path: './dist/js',
     filename: 'bundle.js',
-    publicPath: '/dist/js/'
+    publicPath: 'dist/js/'
   },
-  devServer: {
-    inline: true,
-    hot: true,
-    port: 4242,
-    open: true
-  },
-  // resolve: {
-  //   extensions: ['', '.js']
-  // },
-  devtool: 'source-map',//'inline-source-map',
+  // Step 1: Source Maps
+  devtool: 'cheap-module-source-map',
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
@@ -30,6 +23,12 @@ module.exports = {
       port: 4240,
       proxy: 'http://localhost:4242/',
       files: ['dist/css/*.css', 'dist/images/*.*', '**/*.html', '!node_modules/**/*.html']
+    }),
+    // Step 2: Node environment
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': JSON.stringify('production')
+      }
     })
   ],
   module: {
