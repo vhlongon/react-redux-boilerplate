@@ -7,11 +7,11 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 //import the component and the reducers
-import App from './components/app'
-import reducers from './reducers';
+import App from 'components/app'
+import reducers from 'reducers';
 
 //import your styles
-import css from '../scss/styles.scss';
+import css from 'scss/styles.scss';
 
 // Renader the app by wrapping the component in a provider
 ReactDOM.render(

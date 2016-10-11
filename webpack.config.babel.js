@@ -7,9 +7,9 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 module.exports = {
   entry: './src/js/index.js',
   output: {
-    path: './dist/js',
+    path: './dist/assets',
     filename: 'bundle.js',
-    publicPath: '/dist/js/'
+    publicPath: '/dist/assets/'
   },
   devServer: {
     inline: true,
@@ -19,7 +19,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.css', '.scss', '.jpg', '.png'],
-    modulesDirectories: ['src', 'node_modules', 'scss', 'images']
+    modulesDirectories: ['src', 'node_modules', 'js', 'scss', 'images']
   },
   devtool: 'cheap-eval-source-map',
   plugins: [

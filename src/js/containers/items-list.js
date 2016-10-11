@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {selectItem} from '../actions/index';
+import {selectItem} from 'actions/index';
 import {bindActionCreators} from 'redux';
 
 class ItemsList extends Component {
