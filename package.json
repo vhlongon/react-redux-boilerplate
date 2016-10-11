@@ -7,6 +7,7 @@
     "clean": "rm -f dist/{css/*,js/*,images/*}",
     "postinstall": "webpack-dev-server",
     "start": "webpack-dev-server --config webpack.config.babel.js",
+    "build-dev": "webpack --config webpack.config.babel.js",
     "build": "webpack --config webpack.production.config.babel.js -p"
   },
   "keywords": [
@@ -45,13 +46,14 @@
     "eslint": "^2.3.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^3.16.1",
+    "extract-text-webpack-plugin": "^1.0.1",
     "node-sass": "^3.4.2",
     "postcss-cli": "^2.5.1",
     "postcss-loader": "^0.9.1",
     "react-transform-hmr": "^1.0.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",
-    "stylelint-config-standard": "^6.0.0",
+    "stylelint-config-standard": "^13.0.2",
     "url-loader": "^0.5.7",
     "watch": "^0.17.1",
     "watch-run": "^1.2.4",
