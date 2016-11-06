@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {selectItem} from 'actions/index';
-import {bindActionCreators} from 'redux';
+import {selectItem} from '../actions/index';
 
-class ItemsList extends Component {
+export class ItemsList extends Component {
 
   renderList = () => {
     return this.props.items.map((item) => {
@@ -37,14 +36,7 @@ function mapStateToProps(state) {
 }
 
 
-// USED FOR BINDING ACTIONS
-// Anything returned from this function will end up as props on the Component container
-function mapDispatchToProps(dispatch) {
-  //Whwenever selectItem is called, the result should be passed to all of our reducers
-  return bindActionCreators({selectItem: selectItem}, dispatch);
-}
-
 // Promote Component from a normal React component to a container -
 // this glue together the react view to the redux state object
 // it needs to know about this new dispatch method, selectItem. Make it available as a prop
-export default connect(mapStateToProps, mapDispatchToProps)(ItemsList);
+export default connect(mapStateToProps, {selectItem})(ItemsList);

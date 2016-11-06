@@ -4,6 +4,6 @@ export function selectItem(item) {
     // and maybe data or payload that describes the action
     return {
         type: 'ITEM_SELECTED',
-        payload: item
+        item
     };
 }

@@ -1,0 +1,21 @@
+exports[`components ItemDetails Should show a selected/clicked item 1`] = `
+<div>
+  <h3>
+    Details for: 
+  </h3>
+  <div>
+    Title: 
+    Deus Ex-Machine
+  </div>
+  <div>
+    Pages: 
+    game
+  </div>
+</div>
+`;
+
+exports[`components ItemDetails Should show the initial state / no item selected 1`] = `
+<div>
+  Select an Item to get started.
+</div>
+`;

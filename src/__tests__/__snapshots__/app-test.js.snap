@@ -1,0 +1,1 @@
+exports[`components App should render self and subcomponents 1`] = `"React redux boilerplate test<Connect(ItemsList) /><Connect(Component) />"`;

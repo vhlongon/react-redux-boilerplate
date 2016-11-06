@@ -1,17 +1,16 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-class ItemDetail extends Component {
-
-  render = () => {
-    if(!this.props.item) {
-      return <div>Select an Item to get started.</div>;
-    }
+export const ItemDetails = (props) => {
+  if(!props.activeItem) {
+    return <div>Select an Item to get started.</div>;
+  } else {
+    const {title, type} = props.activeItem;
     return (
       <div>
         <h3>Details for: </h3>
-        <div>Title: {this.props.item.title}</div>
-        <div>Pages: {this.props.item.type}</div>
+        <div>Title: {title}</div>
+        <div>Pages: {type}</div>
       </div>
     );
   }
@@ -19,8 +18,8 @@ class ItemDetail extends Component {
 
 function mapStateToProps(state) {
   return {
-    item: state.ActiveItem
+    activeItem: state.activeItem
   };
 }
 
-export default connect(mapStateToProps)(ItemDetail);
+export default connect(mapStateToProps)(ItemDetails);

@@ -4,7 +4,7 @@ import ActiveItem from './reducer_active_item';
 
 const rootReducer = combineReducers({
   items: ListReducer,
-  ActiveItem: ActiveItem
+  activeItem: ActiveItem
 });
 
 export default rootReducer;

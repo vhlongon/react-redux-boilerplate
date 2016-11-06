@@ -1,0 +1,1 @@
+exports[`components ItemsList should render self and subcomponents 1`] = `"title: Beyond good and evil; type: booktitle: Clockwork Orange; type: filmtitle: Deus Ex-Machine; type: game"`;
