@@ -21,22 +21,17 @@ export class ItemsList extends Component {
 
   render = () => {
     return (
-      <div>
+      <ul>
         {this.renderList()}
-      </div>
+      </ul>
     );
   }
 }
 
-// USED FOR BINDING REDUCERS
 function mapStateToProps(state) {
   return {
     items: state.items
   };
 }
 
-
-// Promote Component from a normal React component to a container -
-// this glue together the react view to the redux state object
-// it needs to know about this new dispatch method, selectItem. Make it available as a prop
 export default connect(mapStateToProps, {selectItem})(ItemsList);

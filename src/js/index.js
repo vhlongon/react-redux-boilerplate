@@ -13,6 +13,8 @@ import reducers from 'reducers';
 //import your styles
 import css from 'scss/styles.scss';
 
+import ReactDOMServer  from 'react-dom/server';
+
 // Renader the app by wrapping the component in a provider
 ReactDOM.render(
   <Provider store={createStore(reducers)}>
@@ -20,3 +22,13 @@ ReactDOM.render(
   </Provider>,
   document.querySelector('.react-root')
 );
+
+
+//render components as string
+const stringComp = ReactDOMServer.renderToString(
+  <Provider store={createStore(reducers)}>
+    <App title="React-Redux boilerplate"/>
+  </Provider>
+);
+
+console.log(stringComp);

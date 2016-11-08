@@ -8,7 +8,7 @@ describe('components', () => {
   describe('ItemDetails', () => {
     test('Should show the initial state / no item selected', () => {
       const component = renderer.create(
-          <ItemDetails activeItem={null} />
+          <ItemDetails activeItem={{}} />
       );
       let tree = component.toJSON();
       expect(tree).toMatchSnapshot();

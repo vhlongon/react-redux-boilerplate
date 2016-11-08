@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-export const ItemDetails = (props) => {
-  if(!props.activeItem) {
+export const ItemDetails = ({activeItem}) => {
+  const {title, type} = activeItem;
+  if(!(title && type)) {
     return <div>Select an Item to get started.</div>;
   } else {
-    const {title, type} = props.activeItem;
     return (
       <div>
         <h3>Details for: </h3>

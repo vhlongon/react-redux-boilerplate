@@ -8,19 +8,19 @@ function setup() {
     title: 'React redux boilerplate test',
   };
 
-  const enzymeWrapper = shallow(<App {...props} />)
+  const component = shallow(<App {...props} />)
 
   return {
     props,
-    enzymeWrapper
+    component
   }
 }
 
 describe('components', () => {
   describe('App', () => {
     test('should render self and subcomponents', () => {
-       const { enzymeWrapper } = setup();
-       expect(enzymeWrapper.text()).toMatchSnapshot();
+       const { component } = setup();
+       expect(component.text()).toMatchSnapshot();
     });
   });
 });
