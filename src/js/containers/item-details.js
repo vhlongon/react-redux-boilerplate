@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 
 export const ItemDetails = ({activeItem}) => {
   const {title, type} = activeItem;
@@ -15,6 +15,10 @@ export const ItemDetails = ({activeItem}) => {
     );
   }
 }
+
+ItemDetails.propTypes = {
+  activeItem: React.PropTypes.object
+};
 
 function mapStateToProps(state) {
   return {

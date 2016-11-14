@@ -1,8 +1,8 @@
 // State argument is not application state, only the state this specific reducer is responsible for
-export default function (item = {}, action) {
+export default function (state = {}, action) {
   switch (action.type) {
     case 'ITEM_SELECTED':
-      return {...item, ...action.item};
+      return {...state, ...action.item};
   }
-  return item;
+  return state;
 }

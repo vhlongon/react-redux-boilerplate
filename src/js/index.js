@@ -1,6 +1,6 @@
 //core dependencies
 import ReactDOM from 'react-dom';
-import React, {Component} from 'react';
+import React from 'react';
 
 // redux specific stuff to create a provider and store
 import { Provider } from 'react-redux';
@@ -31,4 +31,4 @@ const stringComp = ReactDOMServer.renderToString(
   </Provider>
 );
 
-console.log(stringComp);
+//console.log(stringComp);
